@@ -1,0 +1,13 @@
+{
+    "TableName": "file_info_payload",
+    "KeySchema": [
+      { "AttributeName": "payloadKey", "KeyType": "HASH" }
+    ],
+    "AttributeDefinitions": [
+      { "AttributeName": "payloadKey", "AttributeType": "S" }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 1,
+      "WriteCapacityUnits": 1
+    }
+}

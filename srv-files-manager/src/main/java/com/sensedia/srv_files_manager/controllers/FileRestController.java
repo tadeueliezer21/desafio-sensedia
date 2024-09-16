@@ -30,7 +30,7 @@ public class FileRestController {
 		log.debug("trying start process for user [{}]", userEmail);
 
 		fileService.process(file, userEmail);
-		log.info("1 :: Request recebida");
+		log.info("request was executed with success");
 
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
