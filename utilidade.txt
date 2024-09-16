@@ -1,0 +1,3 @@
+docker buildx build -t eli/srv-files-consumer-processing --platform linux/amd64 ./srv-files-consumer-processing/
+docker buildx build -t eli/srv-files-consumer-notify-image --platform linux/amd64 ./srv-files-consumer-notify-image/
+docker buildx build -t eli/srv-files-manager --platform linux/amd64 ./srv-files-manager/
