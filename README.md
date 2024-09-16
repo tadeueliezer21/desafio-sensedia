@@ -22,6 +22,11 @@ No desafio, fala-se sobre o processamento do conteúdo do arquivo e a comunicaç
 
 Uma das soluções seria salvar o conteúdo no **DynamoDB** e enviar para a fila a `PartitionKey` do registro. No entanto, o que esperamos não é o conteúdo do arquivo, e sim o resultado do processamento. Por isso, no meu desenho incluí o upload do arquivo no **S3**, para que possamos posteriormente lê-lo, processá-lo e gravar apenas o resultado daquele arquivo.
 
+## Como executar
+
+- Na pasta raiz, executar o comando **docker-compose up -d**, isso subira o localstack que simula as APIs da AWS.
+- Acessar a passa scripts e executar o script **aws-scripts.sh**, ou copiar e colar um a um no terminal.
+
 ## Todo
 - criar uma lib para colocar classes comuns
 - escrever testes
