@@ -22,7 +22,7 @@ public class SendNotificationListener {
 	public void execute(SendNotificationEvent event) {
 
 		log.debug("trying send notification [{}]", event);
-		notificationProducerService.execute(event.userEmail());
+		notificationProducerService.execute(event.key());
 		log.info("notificaiton was sended with success [{}]", event);
 
 	}

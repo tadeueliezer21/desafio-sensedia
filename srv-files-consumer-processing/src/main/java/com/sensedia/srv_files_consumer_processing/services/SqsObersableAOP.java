@@ -24,7 +24,6 @@ public class SqsObersableAOP {
 		final var event = proceedingJoinPoint.getArgs()[0];
 
 		try {
-
 			log.info("message received by observable aop {} {}", event,
 					observableAOP.dqlQueue());
 

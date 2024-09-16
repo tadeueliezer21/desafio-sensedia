@@ -8,4 +8,8 @@ aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name file-proc
 
 aws --endpoint-url=http://localhost:4566 dynamodb create-table --cli-input-json file://FileInfoPayload.json  --output table | cat
 
+aws --endpoint-url=http://localhost:4566 sns create-topic --name process-notify --region us-east-1 --output table | cat
+
 aws --endpoint-url=http://localhost:4566 sns subscribe --topic-arn  arn:aws:sns:us-east-1:000000000000:process-notify  --protocol sqs --notification-endpoint arn:aws:sqs:us-east-1:000000000000:send-notification --output table | cat
+
+aws --endpoint-url=http://localhost:4566 ses verify-email-identity --email-address processador@notifica.com --region us-east-1

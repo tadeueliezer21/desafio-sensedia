@@ -1,4 +1,4 @@
-package com.sensedia.srv_files_manager.payload;
+package com.sensedia.srv_files_consumer_notify.payload;
 
 import java.util.UUID;
 

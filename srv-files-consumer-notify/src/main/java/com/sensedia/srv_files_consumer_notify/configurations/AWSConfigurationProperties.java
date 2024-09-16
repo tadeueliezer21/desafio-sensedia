@@ -18,5 +18,14 @@ public class AWSConfigurationProperties {
 
 	@NotBlank(message = "Missing sqsResource")
 	private String sqsResource;
+	
+	@NotBlank(message = "Missing sesResource")
+	private String sesResource;
+	
+	@NotBlank(message = "Missing dynamodb")
+	private String dynamoDb;
+	
+	@NotBlank(message = "Missing sesFrom")
+	private String sesFrom;
 
 }

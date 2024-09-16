@@ -34,7 +34,7 @@ public class FileProcessorService {
 		dbTemplate.save(payload);
 
 		publisher.publishEvent(
-				new SendNotificationEvent(payload.getUserEmail()));
+				new SendNotificationEvent(payload.getPayloadKey().toString()));
 
 	}
 

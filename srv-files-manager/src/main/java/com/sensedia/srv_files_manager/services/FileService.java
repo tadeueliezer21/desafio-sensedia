@@ -38,6 +38,8 @@ public class FileService {
 		payload.setContent(byteAsString(file));
 		payload.setSize(file.getSize());
 		payload.setFileName(file.getOriginalFilename());
+		payload.setFileStatus("PENDING");
+
 
 		dbTemplate.save(payload);
 
