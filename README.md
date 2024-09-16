@@ -2,6 +2,8 @@
 
 ## Idealização
 
+![Desenho arquitetura](desenho.jpeg)
+
 A princípio, esse desenho demonstra minha idealização de como gostaria que o desafio fosse implementado. Na imagem, temos três serviços, denominados com o prefixo `srv`, sendo eles: `srv-files-manager`, `srv-files-consumer-processing` e `srv-files-consumer-notify`.
 
 - O primeiro serviço, **srv-files-manager**, é a porta de entrada e recebe a solicitação do usuário para o upload de um arquivo, juntamente com seu email. Ele é responsável por realizar o upload do arquivo para o S3, salvar os dados e publicar na fila `file-processing-queue`, assim finalizando seu ciclo de vida.
