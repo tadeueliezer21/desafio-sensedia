@@ -21,7 +21,7 @@ public class SQSConfiguration {
 	public SqsAsyncClient sqsAsyncClient() {
 		return SqsAsyncClient.builder()
 				.endpointOverride(URI.create(properties.getSqsResource()))
-				.region(Region.of(properties.getSqsResource())).build();
+				.region(Region.of(properties.getRegion())).build();
 	}
 
 }

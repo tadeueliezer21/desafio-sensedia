@@ -26,7 +26,7 @@ public class UploadFileService {
 	private final AWSConfigurationProperties properties;
 
 	private final S3Client s3Client;
-	
+
 	public void execute(MultipartFile file) {
 
 		try {
@@ -41,14 +41,17 @@ public class UploadFileService {
 					Paths.get(".", file.getOriginalFilename()),
 					file.getBytes());
 
-			s3Client.putObject(putObjectRequest, RequestBody.fromFile(pathFile));
+			s3Client.putObject(putObjectRequest,
+					RequestBody.fromFile(pathFile));
 			log.info("file was uploaded to s3 [{}]", putObjectRequest.key());
 
-		} catch (S3Exception e) {
-			log.error("Error uploading object: [{}]",
-					e.awsErrorDetails().errorMessage());
-		} catch (Exception e) {
-			log.error(e.getMessage());
+		} catch (S3Exception ex) {
+			log.error("Error uploading object: [{}]", ex.getMessage());
+			throw ex;
+			
+		} catch (Exception ex) {
+			log.error(ex.getMessage());
+			throw new RuntimeException(ex.getMessage());
 		}
 
 	}

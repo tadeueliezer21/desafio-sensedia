@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SrvFilesManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SrvFilesManagerApplication.class, args);
+		SpringApplication.run(SrvFilesManagerApplication.class);
 	}
 
 }
