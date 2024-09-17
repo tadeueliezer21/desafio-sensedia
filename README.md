@@ -34,3 +34,4 @@ Uma das soluções seria salvar o conteúdo no **DynamoDB** e enviar para a fila
 - escrever testes
 - melhorar o ingles dos logs (joel santana)
 - porq aop nao ta funcionando?
+- faltou swagger (esqueci).
