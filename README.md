@@ -24,8 +24,10 @@ Uma das soluções seria salvar o conteúdo no **DynamoDB** e enviar para a fila
 
 ## Como executar
 
+- Necessario ter AWS cli e docker
 - Na pasta raiz, executar o comando **docker-compose up -d**, isso subira o localstack que simula as APIs da AWS.
-- Acessar a passa scripts e executar o script **aws-scripts.sh**, ou copiar e colar um a um no terminal.
+- Acessar a pasta scripts e executar o script **aws-scripts.sh**, ou copiar e colar um a um no terminal, ira criar a "infraestrutura" necessaria para a execucao.
+- Compilar os projetos **mvn clean package** e rodar **mvn spring-boot:run**
 
 ## Todo
 - criar uma lib para colocar classes comuns
